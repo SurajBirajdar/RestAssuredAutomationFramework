@@ -1,0 +1,83 @@
+{
+	"info": {
+		"_postman_id": "9a967488-d2c9-419e-b8b5-20e95048c7d2",
+		"name": "Authentication",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28834339"
+	},
+	"item": [
+		{
+			"name": "authenticationServer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "client_id",
+							"value": "692183103107-p0m7ent2hk7suguv4vq22hjcfhcr43pj.apps.googleusercontent.com",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "erZOWM9g3UtwNRj340YYaK_W",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "client_credentials",
+							"type": "text"
+						},
+						{
+							"key": "scope",
+							"value": "trust",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://rahulshettyacademy.com/oauthapi/oauth2/resourceOwner/token",
+					"protocol": "https",
+					"host": [
+						"rahulshettyacademy",
+						"com"
+					],
+					"path": [
+						"oauthapi",
+						"oauth2",
+						"resourceOwner",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCourseDetails",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://rahulshettyacademy.com/oauthapi/getCourseDetails?access_token=TqaPscpOwenR3Bj3q0XO7g==",
+					"protocol": "https",
+					"host": [
+						"rahulshettyacademy",
+						"com"
+					],
+					"path": [
+						"oauthapi",
+						"getCourseDetails"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "TqaPscpOwenR3Bj3q0XO7g=="
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

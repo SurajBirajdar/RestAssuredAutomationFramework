@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bd77d4fa-9a33-4b96-be70-078f60e526d0" name="Changes" comment="" />
+    <list default="true" id="bd77d4fa-9a33-4b96-be70-078f60e526d0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/OAuthTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,12 +24,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "SurajBirajdar"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;SurajBirajdar&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
     &quot;url&quot;: &quot;https://github.com/SurajBirajdar/RestAssuredAutomationFramework&quot;,
@@ -49,13 +53,15 @@
     "TestNG.DynamicJson.addBook (1).executor": "Debug",
     "TestNG.DynamicJson.addBook.executor": "Run",
     "TestNG.JiraAPITest.validateJiraApi.executor": "Run",
+    "TestNG.OAuthTest.oAuthTest.executor": "Run",
     "TestNG.PostRequestTest.postRequestTest.executor": "Run",
     "TestNG.TestGetCall.getCallTest.executor": "Run",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/surajbirajdar/Documents/Suraj Birajdar/RestAssuredAutomation/RestAssuredAutomationFramework"
   }
 }]]></component>
-  <component name="RunManager" selected="TestNG.DynamicJson.addBook">
+  <component name="RunManager" selected="TestNG.OAuthTest.oAuthTest">
     <configuration name="RestApiTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="test.RestApiTest" />
       <module name="DemoProject" />
@@ -81,11 +87,17 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JiraAPITest.validateJiraApi" type="TestNG" temporary="true" nameIsGenerated="true">
+    <configuration name="OAuthTest.oAuthTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoProject" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="test.JiraAPITest" />
-      <option name="METHOD_NAME" value="validateJiraApi" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.OAuthTest" />
+      <option name="METHOD_NAME" value="oAuthTest" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -131,11 +143,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.OAuthTest.oAuthTest" />
         <item itemvalue="TestNG.DynamicJson.addBook" />
         <item itemvalue="TestNG.TestGetCall.getCallTest" />
         <item itemvalue="Application.RestApiTest" />
         <item itemvalue="TestNG.PostRequestTest.postRequestTest" />
-        <item itemvalue="TestNG.JiraAPITest.validateJiraApi" />
       </list>
     </recent_temporary>
   </component>

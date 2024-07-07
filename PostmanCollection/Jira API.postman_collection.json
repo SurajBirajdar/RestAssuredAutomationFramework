@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "d729cf2f-7430-4734-892f-b58bd1d330db",
+		"name": "Jira API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28834339"
+	},
+	"item": [
+		{
+			"name": "CreateBugApi",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic c3VyYWpiaXJhamRhcjAzNzFAZ21haWwuY29tOkFUQVRUM3hGZkdGME9MWkE3a0FlQzhRQ1ZsdU9tUjFSNHdBY200RHJidFhtb09pbGJqUkp0SENYeG4zZ1kycFNHUmVwdWdyemtfZTItUF80bzg0NUVMSTVQRTduQXJxQlVneGVybU53WEE3RjYtdHZuNVVQWmhQeGZQb0xjSVdHaWx2LVd1X0VVc0NsN3pqUzdnUXRVQThlUHpVSUxGc2VrOUVHN3B2VlcxUU9IQjRVRk05Q2FSMD1EQzdEOEZFNg==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fields\": {\n       \"project\":\n       {\n          \"key\": \"SCRUM\"\n       },\n       \"summary\": \"Browser is not clickable\",\n       \"issuetype\": {\n          \"name\": \"Bug\"\n       }\n   }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://surajbirajdar0371.atlassian.net/rest/api/3/issue",
+					"protocol": "https",
+					"host": [
+						"surajbirajdar0371",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"3",
+						"issue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AddAttachmentAPI",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Atlassian-Token",
+						"value": "no-check",
+						"type": "text"
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic c3VyYWpiaXJhamRhcjAzNzFAZ21haWwuY29tOkFUQVRUM3hGZkdGME9MWkE3a0FlQzhRQ1ZsdU9tUjFSNHdBY200RHJidFhtb09pbGJqUkp0SENYeG4zZ1kycFNHUmVwdWdyemtfZTItUF80bzg0NUVMSTVQRTduQXJxQlVneGVybU53WEE3RjYtdHZuNVVQWmhQeGZQb0xjSVdHaWx2LVd1X0VVc0NsN3pqUzdnUXRVQThlUHpVSUxGc2VrOUVHN3B2VlcxUU9IQjRVRk05Q2FSMD1EQzdEOEZFNg==",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/Users/surajbirajdar/Desktop/Screenshot 2024-07-06 at 11.00.54 PM.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://surajbirajdar0371.atlassian.net/rest/api/3/issue/10015/attachments",
+					"protocol": "https",
+					"host": [
+						"surajbirajdar0371",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"3",
+						"issue",
+						"10015",
+						"attachments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetAttachmentContent",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic c3VyYWpiaXJhamRhcjAzNzFAZ21haWwuY29tOkFUQVRUM3hGZkdGME9MWkE3a0FlQzhRQ1ZsdU9tUjFSNHdBY200RHJidFhtb09pbGJqUkp0SENYeG4zZ1kycFNHUmVwdWdyemtfZTItUF80bzg0NUVMSTVQRTduQXJxQlVneGVybU53WEE3RjYtdHZuNVVQWmhQeGZQb0xjSVdHaWx2LVd1X0VVc0NsN3pqUzdnUXRVQThlUHpVSUxGc2VrOUVHN3B2VlcxUU9IQjRVRk05Q2FSMD1EQzdEOEZFNg==",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "https://surajbirajdar0371.atlassian.net/rest/api/3/attachment/10011",
+					"protocol": "https",
+					"host": [
+						"surajbirajdar0371",
+						"atlassian",
+						"net"
+					],
+					"path": [
+						"rest",
+						"api",
+						"3",
+						"attachment",
+						"10011"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

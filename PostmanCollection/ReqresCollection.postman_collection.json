@@ -1,0 +1,270 @@
+{
+	"info": {
+		"_postman_id": "128ccdce-893d-4cb2-b8eb-07b7503d17e0",
+		"name": "ReqresCollection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28834339"
+	},
+	"item": [
+		{
+			"name": "addUsers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var schema = {",
+							"  \"$schema\": \"http://json-schema.org/draft-04/schema#\",",
+							"  \"type\": \"object\",",
+							"  \"properties\": {",
+							"    \"data\": {",
+							"      \"type\": \"object\",",
+							"      \"properties\": {",
+							"        \"id\": {",
+							"          \"type\": \"integer\"",
+							"        },",
+							"        \"email\": {",
+							"          \"type\": \"string\"",
+							"        },",
+							"        \"first_name\": {",
+							"          \"type\": \"string\"",
+							"        },",
+							"        \"last_name\": {",
+							"          \"type\": \"string\"",
+							"        },",
+							"        \"avatar\": {",
+							"          \"type\": \"string\"",
+							"        }",
+							"      },",
+							"      \"required\": [",
+							"        \"id\",",
+							"        \"email\",",
+							"        \"first_name\",",
+							"        \"last_name\",",
+							"        \"avatar\"",
+							"      ]",
+							"    },",
+							"    \"support\": {",
+							"      \"type\": \"object\",",
+							"      \"properties\": {",
+							"        \"url\": {",
+							"          \"type\": \"string\"",
+							"        },",
+							"        \"text\": {",
+							"          \"type\": \"string\"",
+							"        }",
+							"      },",
+							"      \"required\": [",
+							"        \"url\",",
+							"        \"text\"",
+							"      ]",
+							"    }",
+							"  },",
+							"  \"required\": [",
+							"    \"data\",",
+							"    \"support\"",
+							"  ]",
+							"};",
+							"",
+							"",
+							"pm.test('Schema is valid', function () {",
+							"    pm.expect(tv4.validate(pm.response.json(), schema)).to.be.true;",
+							"});",
+							"",
+							"pm.test('email check', function () {",
+							"    var res = pm.response.json();",
+							"    pm.expect(res.data.email).to.contain(\"bluth\")",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/1",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "addSingleUser",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"exec": [
+							"//that is executed before ",
+							"console.log(\"checking\")",
+							"",
+							"pm.collectionVariables.set(\"int\", _.random(1,12));",
+							"",
+							"pm.collectionVariables.set(\"int1\", _.random(1,12));",
+							"",
+							"var a = _.random(0,12)",
+							"console.log(a)"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 600ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(600);",
+							"});",
+							"",
+							"pm.test(\"Content-Type is present\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\");",
+							"});",
+							"",
+							"pm.test(\"Body matches string\", function () {",
+							"    pm.expect(pm.response.text()).to.include(\"To keep ReqRes free, contributions towards server costs are appreciated!\");",
+							"});",
+							"",
+							"pm.test(\"Your test name\", function () {",
+							"    var jsonData = pm.response.json();",
+							"    pm.expect(jsonData.support.url).to.eql('https://reqres.in/#support-heading');",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}api/users/:id",
+					"host": [
+						"{{url}}api"
+					],
+					"path": [
+						"users",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "{{int1}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createUser",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"{{$randomFirstName}}\",\n    \"job\": \"{{$randomJobTitle}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "updateUser",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "https://reqres.in/",
+			"type": "string"
+		},
+		{
+			"key": "int",
+			"value": ""
+		},
+		{
+			"key": "int1",
+			"value": ""
+		}
+	]
+}
