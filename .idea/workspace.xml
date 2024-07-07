@@ -51,7 +51,6 @@
     "TestNG.JiraAPITest.validateJiraApi.executor": "Run",
     "TestNG.PostRequestTest.postRequestTest.executor": "Run",
     "TestNG.TestGetCall.getCallTest.executor": "Run",
-    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/surajbirajdar/Documents/Suraj Birajdar/RestAssuredAutomation/RestAssuredAutomationFramework"
   }
