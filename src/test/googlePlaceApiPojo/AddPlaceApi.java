@@ -1,7 +1,9 @@
 package test.googlePlaceApiPojo;
 
+import javax.xml.bind.annotation.XmlRootElement;
 import java.util.List;
 
+@XmlRootElement
 public class AddPlaceApi {
 
     private int accuracy;

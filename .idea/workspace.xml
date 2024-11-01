@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bd77d4fa-9a33-4b96-be70-078f60e526d0" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/SpecBuilderTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/SerializeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/SerializeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/googlePlaceApiPojo/AddPlaceApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/googlePlaceApiPojo/AddPlaceApi.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/test/googlePlaceApiPojo/AddPlaceApi.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/test/googlePlaceApiPojo/AddPlaceApi.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,45 +45,39 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Basics.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ComplexJsonParse.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RestApiTest.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;TestNG.DynamicJson.addBook (1).executor&quot;: &quot;Debug&quot;,
-    &quot;TestNG.DynamicJson.addBook.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.JiraAPITest.validateJiraApi.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.OAuthTest.oAuthTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.PostRequestTest.postRequestTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.SerializeTest.serializeTest (1).executor&quot;: &quot;Debug&quot;,
-    &quot;TestNG.SerializeTest.serializeTest.executor&quot;: &quot;Run&quot;,
-    &quot;TestNG.TestGetCall.getCallTest.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/surajbirajdar/Documents/GitHub/RestAssuredAutomationFramework&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.fileTypes&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Basics.executor": "Run",
+    "Application.ComplexJsonParse.executor": "Run",
+    "Application.RestApiTest.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "TestNG.DynamicJson.addBook (1).executor": "Debug",
+    "TestNG.DynamicJson.addBook.executor": "Run",
+    "TestNG.JiraAPITest.validateJiraApi.executor": "Run",
+    "TestNG.OAuthTest.oAuthTest.executor": "Run",
+    "TestNG.PostRequestTest.postRequestTest.executor": "Run",
+    "TestNG.SerializeTest.serializeTest (1).executor": "Debug",
+    "TestNG.SerializeTest.serializeTest.executor": "Run",
+    "TestNG.SpecBuilderTest.serializeTest.executor": "Run",
+    "TestNG.TestGetCall.getCallTest.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/surajbirajdar/Documents/GitHub/RestAssuredAutomationFramework",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.fileTypes"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="test" />
+    </key>
   </component>
-  <component name="RunManager" selected="TestNG.SerializeTest.serializeTest">
-    <configuration name="RestApiTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="test.RestApiTest" />
-      <module name="DemoProject" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="TestNG.SpecBuilderTest.serializeTest">
     <configuration name="DynamicJson.addBook" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoProject" />
       <option name="PACKAGE_NAME" value="" />
@@ -130,6 +126,24 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="SpecBuilderTest.serializeTest" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="DemoProject" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="test.SpecBuilderTest" />
+      <option name="METHOD_NAME" value="serializeTest" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TestGetCall.getCallTest" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="DemoProject" />
       <extension name="coverage">
@@ -150,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.SpecBuilderTest.serializeTest" />
         <item itemvalue="TestNG.SerializeTest.serializeTest" />
         <item itemvalue="TestNG.OAuthTest.oAuthTest" />
         <item itemvalue="TestNG.DynamicJson.addBook" />
         <item itemvalue="TestNG.TestGetCall.getCallTest" />
-        <item itemvalue="Application.RestApiTest" />
       </list>
     </recent_temporary>
   </component>
